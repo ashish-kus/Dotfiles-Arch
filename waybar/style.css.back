@@ -1,0 +1,150 @@
+* {
+  border: none;
+  font-family: "Comic Code Ligatures";
+  font-size: 14px;
+  text-decoration: none;
+  min-height: 0;
+  margin: 0 5px 0 0; 
+}
+
+@define-color background #000000;
+@define-color foreground #FFFFFF;
+window#waybar {
+  background: transparent;
+  background: alpha(@background,.6);
+  color: @foreground;
+}
+
+#window {
+    font-family: inherit;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#workspaces {
+  padding: 0 5px;
+  font-weight: bold;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    font-size: 40px;
+    background: transparent;
+    color: white;
+    border-top: 2px solid transparent;
+}
+
+#workspaces button.focused {
+    color: #c9545d;
+    border-top: 2px solid #c9545d;
+}
+
+#mode {
+    background: #64727D;
+    border-bottom: 3px solid white;
+}
+
+#clock, #battery, #cpu, #memory, #network, #pulseaudio, #custom-spotify, #tray, #mode {
+    padding: 0 3px;
+    margin: 0 2px;
+}
+
+#battery {
+  color: @foreground;
+}
+
+#battery icon {
+  color: red;
+}
+
+#battery.charging {
+  background: alpha(@foreground,.6);
+  color: @background;
+  border-radius: 13px;
+}
+
+@keyframes blink {
+  to {
+    background-color: alpha(red,.6);
+    color: @foreground;
+  }
+}
+
+#battery.warning:not(.charging),#battery.critical:not(.charging) {
+  color: @foreground;
+  background: @background;
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  border-radius: 13px;
+}
+
+#cpu {
+}
+
+#memory {
+}
+
+
+
+#network.wifi,#network.ethernet {
+  color: @foreground;
+}
+
+#network.disconnected {
+  color: alpha(#f53c3c,.7);
+}
+
+#pulseaudio {
+}
+
+#pulseaudio.muted {
+}
+
+#custom-spotify {
+    color: rgb(102, 220, 105);
+}
+
+#tray {
+}
+
+#bluetooth {
+  font-weight: 800;
+  padding: 0 4px;
+}
+
+#bluetooth.on,#bluetooth.off {
+  color: @foreground;
+  font-weight: 800;
+}
+
+#bluetooth.discoverable {
+  color: @foreground;
+  background: @background;
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  border-radius: 13px;
+}
+
+#bluetooth.connected {
+  color: @foreground;
+}
+
+#idle_inhibitor {
+  font-size: 20px;
+  font-weight: 800;
+  padding: 0px 4px;
+  color: @foreground;
+}
+#taskbar button{
+  margin: 0px;
+  padding: 0px;
+}
+#custom-vpn {
+  font-size: 16px;
+}

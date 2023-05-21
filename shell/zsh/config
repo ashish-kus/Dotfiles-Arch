@@ -1,0 +1,40 @@
+# This is zsh default config
+
+loc=`dirname $(realpath ${BASH_SOURCE:-$0})`
+fpath+="$loc/completions/"
+
+# znap config
+
+[ -f "$loc"/plugins/zsh-snap/znap.zsh ] || git clone --depth 1 -- https://github.com/marlonrichert/zsh-snap.git "$loc"/plugins/zsh-snap
+. "$loc"/plugins/zsh-snap/znap.zsh
+
+[ -f "$loc"/plugins/zsh-snap/znap.zsh ] && {
+  znap install ohmyzsh/ohmyzsh
+  znap source ohmyzsh/ohmyzsh plugins/{colored-man-pages,sudo}
+  znap source zsh-users/zsh-autosuggestions
+  znap source z-shell/F-Sy-H
+  znap source chrissicool/zsh-256color
+  znap source jeffreytse/zsh-vi-mode
+
+  prompt-init(){
+    znap eval starship 'starship init zsh --print-full-init'
+    # hash colorscript 2>/dev/null && colorscript -r 
+    prompt_starship_precmd
+    znap prompt starship
+  }
+  hash starship 2>/dev/null && prompt-init
+
+  zvm_after_init_commands+=('[ -f "$loc"/afterinit ] && . "$loc"/afterinit')
+}
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
+# exporting here as oh-my-zsh overrides them
+export HISTSIZE=10000000
+export SAVEHIST=10000000
+export HISTFILE=${HISTFILE:-"$HOME/.zsh_history"}
+setopt INC_APPEND_HISTORY
+setopt HIST_IGNORE_SPACE
+
+# aliases
+alias history="history 0"
+
