@@ -9,8 +9,8 @@ fpath+="$loc/completions/"
 . "$loc"/plugins/zsh-snap/znap.zsh
 
 [ -f "$loc"/plugins/zsh-snap/znap.zsh ] && {
-  znap install ohmyzsh/ohmyzsh
-  znap source ohmyzsh/ohmyzsh plugins/{colored-man-pages,sudo}
+#  znap install ohmyzsh/ohmyzsh
+#  znap source ohmyzsh/ohmyzsh plugins/{colored-man-pages,sudo}
   znap source zsh-users/zsh-autosuggestions
   znap source z-shell/F-Sy-H
   znap source chrissicool/zsh-256color
@@ -18,9 +18,9 @@ fpath+="$loc/completions/"
 
   prompt-init(){
     znap eval starship 'starship init zsh --print-full-init'
-    # hash colorscript 2>/dev/null && colorscript -r 
-    prompt_starship_precmd
-    znap prompt starship
+#    hash colorscript 2>/dev/null && colorscript -r 
+#    prompt_starship_precmd
+#    znap prompt starship
   }
   hash starship 2>/dev/null && prompt-init
 

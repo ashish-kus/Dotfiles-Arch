@@ -17,6 +17,7 @@ linking() {
  linking "$myloc/shell" "$HOME/.config/shell"
  linking "$myloc/waybar" "$HOME/.config/waybar"
  linking "$myloc/mako" "$HOME/.config/mako"
+ linking "$myloc/cava" "$HOME/.config/caval"
  linking "$myloc/starship.toml" "$HOME/.config/starship.toml"
  # linking "$myloc/foot" "$HOME/.config/"
  # linking "$myloc/mako" "$HOME/.config/"
