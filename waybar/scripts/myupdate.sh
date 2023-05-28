@@ -5,6 +5,7 @@ hash paru 2>/dev/null && pkgmgr="paru"
 hash yay 2>/dev/null && pkgmgr="yay"
 
 IFS=$'\n'$'\r'
+
 updatesli=($($pkgmgr -Qu))
 text=${#updatesli[@]}
 icon=""
@@ -14,6 +15,7 @@ for i in ${updatesli[@]}
 do
   tooltip+="$i\n"
 done
+
 cat << EOF
 { "text":"$icon", "tooltip":"UPDATES:  $text"}  
 EOF

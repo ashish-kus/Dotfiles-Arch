@@ -6,7 +6,8 @@
 }
 
 window#waybar {
-    background: rgba(00, 00, 00, 0.5);
+    /* background: rgba(00, 00, 00, 0.5); */
+    background: #000;
     border: 1px solid #7645ad ;
     border-radius: 5px;
 }
@@ -46,7 +47,20 @@ window#waybar.hidden {
 }
 
 
-#clock, #disk, #memory, #temperature, #cpu, #backlight, #idle_inhibitor, #bluetooth, #pulseaudio, #network , #battery{
+#clock,
+#disk,
+#memory,
+#temperature,
+#cpu,
+#backlight,
+#idle_inhibitor,
+#bluetooth, 
+#pulseaudio,
+#network , 
+#battery,
+#custom-powerDown,
+#custom-governor,
+#custom-weather{
   padding: 0 6px;
 }
 #temperature.critical {
