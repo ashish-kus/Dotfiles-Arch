@@ -59,6 +59,7 @@ check_alias speed-test speedtest "speed-test"
 check_alias glow mcat "glow"
 check_alias bpython python "bpython"
 check_alias sl sl "sl | lolcat"
+check_alias rmtrash rm "rmtrash"
 check_alias sensors wsensors 'watch -n1 -t "sensors"'
 check_alias nvim vim "nvim"
 check_alias lvim vim "lvim"
