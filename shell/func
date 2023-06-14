@@ -66,7 +66,7 @@ run(){
    py)
       python3 $FILE ;;
   cpp)
-      g++ -o compiled $FILE && ./compiled ;;
+      g++ $FILE -o compiled  && ./compiled ;;
     *)
       echo "File extension unknown";;
     esac

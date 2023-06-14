@@ -1,3 +1,5 @@
+<div align="center" width="100%"> <img src="./src/Images/Dotfiles.png.png"> </div>
+ 
 # Dotfile 
 This repository contains configuration files and settings for CLI and GUI software, enabling personalized customization of your software and system environment.
 *Purpose* The purpose of this repository is to centralize and version control your dotfiles, making it easier to manage and share your preferred configurations across different machines or operating systems.
