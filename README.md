@@ -1,4 +1,4 @@
-<div align="center" width="100%"> <img src="./src/Images/Dotfiles.png.png"> </div>
+<div align="center" width="100%"> <img src="./src/Images/Dotfiles.png"> </div>
  
 # Dotfile 
 This repository contains configuration files and settings for CLI and GUI software, enabling personalized customization of your software and system environment.
