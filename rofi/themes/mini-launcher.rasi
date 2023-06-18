@@ -1,0 +1,116 @@
+
+* {
+    al:   #11032100;
+    bg:   #261638AD;
+    bga:  #000000FF;
+    fg:   #c4dae1FF;
+    ac:   #7645AD;
+    se:   #7645AD50;
+    dbg:  #11151d02;
+    text-color: @ac;
+}
+
+window {
+  transparency:               "real";
+  background-color:           @bg;
+  text-color:                 @fg;
+  border:				  	          0px;
+  border-color:					      @ac;
+  border-radius:              8px;
+  width:			          			500px;
+  location:                   center;
+  x-offset:                   0;
+  y-offset:                   0;
+}
+
+prompt {
+  enabled: 				   	true;
+	padding: 				    0px;
+	background-color: 	@al;
+	text-color: 				@ac;
+}
+
+entry {
+  background-color:               @al;
+  text-color:                     @fg;
+  placeholder-color:              @fg;
+  expand:                         true;
+  horizontal-align:               0;
+  placeholder:                    "Search...";
+  padding:                        0px 0px 0px 8px;
+  blink:                          true;
+}
+
+inputbar {
+	children: 			          			[ prompt, entry ];
+  background-color:               @bga;
+  text-color:                     @fg;
+  expand:                         false;
+	border:           							0px 0px 0px 0px;
+  border-radius:                  0px;
+	border-color:		          			@bg;
+  margin:                         0px;
+  padding:                        12px;
+}
+
+listview {
+  background-color:               @al;
+  padding:                        0px;
+  columns:                        1;
+  lines:                          6;
+  spacing:                        5px;
+  cycle:                          true;
+  dynamic:                        true;
+  layout:                         vertical;
+}
+
+message {
+  border: 2px 0 0 0;
+  border-color: @ac;
+  padding: 1.5ch 3ch 1.5ch 3ch;
+  vertical-align: 0.5;
+  text-color: #fff;
+  background: #fff;
+}
+
+mainbox {
+  background-color:               @al;
+	border:							            0px;
+  border-radius:                  0px;
+	border-color:			          		@ac;
+  children:                       [ inputbar, listview, message ];
+  spacing:                       	0px;
+  padding:                        0px;
+}
+
+element {
+  background-color:               @al;
+  text-color:                     @fg;
+  orientation:                    horizontal;
+  border-radius:                  0px;
+  padding:                        8px;
+}
+
+element-icon {
+  background-color:               transparent;
+  text-color:                  		inherit;
+  size:                           24px;
+  border:                         0px;
+}
+
+element-text {
+  background-color:               transparent;
+  text-color:                 		inherit;
+  expand:                         true;
+  horizontal-align:               0;
+  vertical-align:                 0.5;
+  margin:                         0px 2.5px 0px 2.5px;
+}
+
+element selected {
+  background-color:               @se;
+  text-color:                     @fg;
+	border:					            		0px 0px 0px 2px;
+  border-radius:                  0px;
+  border-color:                  	@ac;
+}
