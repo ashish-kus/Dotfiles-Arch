@@ -119,15 +119,28 @@
       "on-scroll-up": "pactl set-source-volume 0 -1%",
       "on-scroll-down": "pactl set-source-volume 0 +1%",
    },
+  
    "backlight": {
-                 "device": "intel_backlight",
-                 "format": "<span font='18'>{icon}</span>",
-                 "tooltip-format": "盛{Percentage}%",
-                 "format-icons": ["", "", "", "", "" ],
-                 "on-scroll-up" : "light -A 1",
-                 "on-scroll-down" : "light -U 1"
-             },
-    "bluetooth": {
+    "device": "intel_backlight",
+    "format": "{icon} ",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+    ],
+    "on-scroll-down": "light -A 10",
+    "on-scroll-up": "light -U 10",
+    "smooth-scrolling-threshold": 1
+  },
+
+  "bluetooth": {
   "format-on": "<span font='10'></span>",
   "format-off": "",
   "format-disabled": "",

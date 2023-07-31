@@ -25,7 +25,7 @@ linking() {
  linking "$myloc/nautilus" "$HOME/.config/nautilus/"
  linking "$myloc/wlogout" "$HOME/.config/"
  linking "$myloc/neofetch" "$HOME/.config/neofetch"
- linking "$myloc/kanchi" "$HOME/.config/kanchi"
+ linking "$myloc/kanshi" "$HOME/.config/kanshi"
  # linking "$myloc/foot" "$HOME/.config/"
  # linking "$myloc/mako" "$HOME/.config/"
  # linking "$myloc/btop" "$HOME/.config/"
